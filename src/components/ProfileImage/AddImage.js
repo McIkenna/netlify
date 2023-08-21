@@ -66,7 +66,7 @@ class AddImage extends Component {
       let {imagePreviewUrl} = this.state;
       let $imagePreview = null;
       if (imagePreviewUrl) {
-        $imagePreview = (<img src={imagePreviewUrl} alt="..image"/>);
+        $imagePreview = (<img src={imagePreviewUrl} alt="item"/>);
       } else {
         $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
       }

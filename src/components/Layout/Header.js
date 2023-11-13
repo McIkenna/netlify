@@ -30,7 +30,7 @@ const {validToken, user} = this.props.security;
                 <li><CreateWorkButton /></li>
                 <li><CreateProjectButton /></li>
                 <li><CreateSkillButton /></li>
-                <li onClick={this.logout.bind(this)}><LogoutButton /></li>
+                <li onClick={this.logout.bind(this)} disabled><LogoutButton /></li>
                 <div ><Link to="/"  ><p style={{color: "red"}}>Logged in as {user.sub}</p></Link></div>
                 
                     
@@ -60,7 +60,7 @@ const {validToken, user} = this.props.security;
                 </Link>  
              </div>
                 <div className={styles.navItem}>
-            {headlinks}
+            {/* {headlinks} */}
             </div>
             </div>
               

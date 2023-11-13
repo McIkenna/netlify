@@ -5,10 +5,10 @@ import PropTypes from "prop-types"
 import {connect} from "react-redux"
 import {deleteInfo} from "../../actions/InfoActions"
 import {Spring} from "react-spring/renderprops"
-import resume from "../../actions/imageData/Ikenna Ifekaonwu - ProfilePDF.pdf"
+import resume from "../../actions/imageData/Ikenna Ifekaonwu - Pdf.pdf"
 import github from "../../actions/imageData/github.png"
 import linkedin from "../../actions/imageData/linkedin.png";
-
+import internet from "../../actions/imageData/internet.png";
 
  class InfoItem extends Component {
 
@@ -78,7 +78,7 @@ import linkedin from "../../actions/imageData/linkedin.png";
            <div className={classes.contact}><Link to="/contactForm" >
            <button className={classes.hirebtn}>Contact Me</button>
            </Link>    </div>
-            <div><a href={resume} download="Ikenna I.pdf"><button className={classes.downcv}>Download CV</button></a>
+            <div><a href={resume} download="Ikenna Ifekaonwu - resume.pdf"><button className={classes.downcv}>Download CV</button></a>
             </div>
             </div>
             <div className={classes.socials}>
@@ -88,6 +88,9 @@ import linkedin from "../../actions/imageData/linkedin.png";
            </a>
            < a href="https://www.linkedin.com/in/ikenna-ifekaonwu/" target="blank"  >
                 <img src={linkedin} alt="linkedIn" className={classes.linkedin}/>
+           </a>
+           < a href="https://ikennaifek.netlify.app/" target="blank"  >
+                <img src={internet} alt="website" className={classes.linkedin}/>
            </a>
             </div>
                     

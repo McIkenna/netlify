@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import styles from "./Header.module.css"
 import {Link} from "react-router-dom"
-import CreateInfo from '../Info/CreateInfoButton'
-import CreateEduButton from '../Education/CreateEduButton';
-import CreateWorkButton from '../Work/CreateWorkButton';
-import CreateProjectButton from '../Project/CreateProjectButton';
-import CreateSkillButton from '../Skill/CreateSkillButton';
+// import CreateInfo from '../Info/CreateInfoButton'
+// import CreateEduButton from '../Education/CreateEduButton';
+// import CreateWorkButton from '../Work/CreateWorkButton';
+// import CreateProjectButton from '../Project/CreateProjectButton';
+// import CreateSkillButton from '../Skill/CreateSkillButton';
 import logo from "../../actions/imageData/Ikenna2.png"
-import LoginButton from "../Contact/LoginButton"
+// import LoginButton from "../Contact/LoginButton"
 import PropTypes from "prop-types"
 import {connect} from "react-redux";
 import {logout} from "../../actions/SecurityActions"
-import LogoutButton from "../Contact/LogoutButton"
+// import LogoutButton from "../Contact/LogoutButton"
 
 class Header extends Component {
 
@@ -22,34 +22,34 @@ class Header extends Component {
 
 
     render() { 
-const {validToken, user} = this.props.security;
-        const userIsAuthenticated = (
-            <div >
-                <li><CreateInfo/></li>
-                <li><CreateEduButton /></li>
-                <li><CreateWorkButton /></li>
-                <li><CreateProjectButton /></li>
-                <li><CreateSkillButton /></li>
-                <li onClick={this.logout.bind(this)} disabled><LogoutButton /></li>
-                <div ><Link to="/"  ><p style={{color: "red"}}>Logged in as {user.sub}</p></Link></div>
+// const {validToken, user} = this.props.security;
+        // const userIsAuthenticated = (
+        //     <div >
+        //         <li><CreateInfo/></li>
+        //         <li><CreateEduButton /></li>
+        //         <li><CreateWorkButton /></li>
+        //         <li><CreateProjectButton /></li>
+        //         <li><CreateSkillButton /></li>
+        //         <li onClick={this.logout.bind(this)} disabled><LogoutButton /></li>
+        //         <div ><Link to="/"  ><p style={{color: "red"}}>Logged in as {user.sub}</p></Link></div>
                 
                     
-            </div>
-        )
+        //     </div>
+        // )
 
-        const userIsNotAuthenticated =(
-            <div className={styles.navItem}>
-            <li><LoginButton /></li>
-            </div>
-        )
+        // const userIsNotAuthenticated =(
+        //     <div className={styles.navItem}>
+        //     <li><LoginButton /></li>
+        //     </div>
+        // )
 
-        let headlinks;
+        // let headlinks;
 
-        if(validToken&&user){
-            headlinks = userIsAuthenticated;
-        }else{
-            headlinks = userIsNotAuthenticated;
-        }
+        // if(validToken&&user){
+        //     headlinks = userIsAuthenticated;
+        // }else{
+        //     headlinks = userIsNotAuthenticated;
+        // }
 
         return (
         <div className={styles.Header}>
